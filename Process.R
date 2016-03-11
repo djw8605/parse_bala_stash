@@ -16,6 +16,13 @@ m <- ggplot(data, aes(x=difference)) +
   scale_y_continuous(labels=percent)
   
 m
+
+m <- ggplot(data, aes(x=difference)) + stat_ecdf()+
+  ylab("Distribution") +
+  xlab("Delay in minutes") +
+  scale_y_continuous(labels=percent) +
+  theme_bw()
+m
   #scale_y_continuous(labels=percent)
 #m + geom_histogram(aes(fill = ..count..), binwidth = 15) + 
 #  scale_fill_gradient("Count", low = "green", high = "red")
